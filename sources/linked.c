@@ -1,6 +1,6 @@
 #include<stdlib.h>
 #include<stdio.h>
-#include"linked.h"
+#include"../include/linked.h"
 
 struct node_t{
     int value;
