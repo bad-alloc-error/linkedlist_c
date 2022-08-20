@@ -113,16 +113,15 @@ void root_node(linked_list_t* ll, int value){
         ll->size++;       
 }
 
-node_t* remove_node(linked_list_t* list, int value){
+void remove_node(linked_list_t* list, int value){
     node_t* deleted_node = NULL;
 
     if(is_empty(list) == false){
         if(list->head->value == value){
             deleted_node = list->head;
             list->head = deleted_node->next;
+            free(deleted_node);
             list->size--;
-            return deleted_node;
-            
         }else{
            
             node_t* current = list->head->next;
@@ -134,8 +133,8 @@ node_t* remove_node(linked_list_t* list, int value){
             if(current->next){
                 deleted_node = current->next;
                 current->next = deleted_node->next;
+                free(deleted_node);
                 list->size--;
-                return deleted_node;
             }
         }
     }
