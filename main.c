@@ -19,14 +19,12 @@ int main(){
     ordered_insert(ll, 344);
     ordered_insert(ll, 1);
     print(ll);
-    node_t* removido = remove_node(ll, 1000);
-    free(removido);
+    remove_node(ll, 1000);
+
     print(ll);
-    node_t* removido2 = remove_node(ll, 344);
-    free(removido2);
+    remove_node(ll, 344);
     print(ll);
-    node_t* removido3 = remove_node(ll, 1);
-    free(removido3);
+    remove_node(ll, 1);
     print(ll);
     // node_t* removido4 = remove_node(ll, 4535);
     // free(removido4);
